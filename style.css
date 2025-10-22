@@ -385,10 +385,11 @@ main {
   text-align: center;
   padding: 0 3em 0 0;
   color: var(--text);
+  margin-bottom: 2em;
 }
 .form {
   font-family: poppins, sans-serif, serif;
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 .form input {
@@ -458,4 +459,29 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 0.8em;
+}
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  width: fit-content;
+  height: 20em;
+  margin-top: 1em;
+}
+.dev_text{
+  font-size: .8em;
+  margin-right: 2em;
+}
+.social-links a {
+  display: flex;
+  align-items: center;
+  font-size: 3em;
+  gap: 2em;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: var(--hover);
+  transition: color 0.2s ease-in;
 }

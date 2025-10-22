@@ -385,6 +385,10 @@
   .vali_grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .social-links a span {
+    font-size: 0.9em;
+    word-break: break-word;
+  }
 }
 /* 480px */
 @media (max-width: 30em) {
@@ -446,6 +450,10 @@
   }
   .design_decision img {
     width: 40em;
+  }
+  .social-links a span {
+    font-size: 0.9em;
+    word-break: break-word;
   }
 }
 /* 320px - 370px */
