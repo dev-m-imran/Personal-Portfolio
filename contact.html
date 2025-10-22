@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <!-- Style sheet -->
+    <link rel="stylesheet" href="style.css" >
+    <!-- For Responsiveness -->
+    <link rel="stylesheet" href="media.css" >
+    <!-- For icons -->
+    <script
+      src="https://kit.fontawesome.com/1871057078.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- title -->
+    <title>Contact</title>
+    <!-- title icons -->
+    <link
+      rel="icon"
+      href="Assets/icon.png"
+      media="(prefers-color-scheme: dark)"
+      type="image/png"
+    >
+    <link
+      rel="icon"
+      href="Assets/icon.png"
+      media="(prefers-color-scheme: light)"
+      type="image/png"
+    >
+  </head>
+  <body id="clicked">
+    <header>
+      <h1>Muhammad.</h1>
+      <a class="on showNav" href="#clicked"></a>
+    </header>
+    <nav>
+      <a class="off" href="#">X</a>
+      <ul class="nav-bar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <main>
+      <!-- Contact container -->
+      <div class="contact-page">
+        <!-- Contact page Left container -->
+        <div class="contact-container-1">
+          <div class="avatar-images">
+            <img src="Assets/Avatar1.webp" alt="Avatar-image" >
+            <img src="Assets/avatar2.webp" alt="Avatar-image" >
+            <img src="Assets/Avatar3.webp" alt="Avatar-image" >
+          </div>
+          <div class="contact-heading">
+            <h1>Let's talk about</h1>
+            <h1>Everthing!</h1>
+            <p>Reach out—your next big idea starts here!</p>
+          </div>
+          <div class="contact-icons" id="contact-page-icons">
+            <a
+              href="https://www.facebook.com/profile.php?id=100071753170646"
+              target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a href="https://github.com/dev-m-imran" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/muhammadimran09/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="https://x.com/MuhammadIm76350" target="_blank"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
+        </div>
+        <!-- Contact Page right container -->
+        <div class="contact-container-2">
+          <h1>Contact Me</h1>
+          <form
+            action="mailto:Chris.Rafferty@northampton.ac.uk"
+            method="post"
+            enctype="text/plain"
+            class="form"
+          >
+            <input type="text" name="name" placeholder="Full Name" required >
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            >
+            <input type="text" name="subject" placeholder="Subject" required >
+            <textarea
+              name="message"
+              id="message-box"
+              placeholder="Message"
+            ></textarea>
+            <button class="contact-form-btn">
+              Submit
+              <i class="fa-solid fa-arrow-right" style="color: #ffffff"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="ftr-line">
+        <h1>&copy;2025 Muhammad Imran</h1>
+      </div>
+    </footer>
+  </body>
+</html>

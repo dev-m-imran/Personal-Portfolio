@@ -1,0 +1,474 @@
+:root {
+  --text: #fff;
+  --hover: #78cc6d;
+  --span-txt: #000000;
+  --prfl-bg: #19101063;
+  --main-bg: #2b2b2b;
+  --ftr-bg: #00000023;
+  --shadow: #78cc6d47;
+  --input-tags: #3f3f3f;
+}
+/* 1456px */
+@media (max-width: 91em) {
+  /* Home */
+  .profile-pic {
+    padding: 3em 0 0 5em;
+  }
+  .personal-info {
+    padding: 3em 0 0 1em;
+  }
+  /* project */
+  .project-cntr {
+    padding-left: 12em;
+  }
+}
+/* 1430 */
+@media (max-width: 89.375em) {
+  /* project */
+  .project-cntr {
+    padding-left: 10em;
+  }
+}
+/* 1408px */
+@media (max-width: 88em) {
+  html {
+    font-size: 54%;
+  }
+  /* home */
+  .personal-info {
+    padding: 3em 0 0 0;
+  }
+}
+/* 1217 */
+@media (max-width: 76.0625em) {
+  /* project */
+  .project-cntr {
+    padding: 7em 0 0 10em;
+  }
+}
+/* 1200px */
+@media (max-width: 75em) {
+  html {
+    font-size: 52%;
+  }
+  /* home */
+  .profile-cntnr {
+    grid-template-columns: 30% 70%;
+  }
+  .profile-pic {
+    padding: 3em 0 0 0;
+  }
+  /* contact */
+  .contact-page {
+    padding-left: 13em;
+  }
+}
+/* 1180px */
+@media (max-width: 73.75em) {
+  html {
+    font-size: 52%;
+  }
+  /* project */
+  .project-cntr {
+    padding: 7em 0 0 10em;
+  }
+  /* contact */
+  .contact-page {
+    padding-left: 10em;
+  }
+  .contact-container-2 {
+    padding-left: 5em;
+  }
+}
+/* 1120 */
+@media (max-width: 70em) {
+  /* home */
+  .profile-cntnr {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "profile"
+      "info";
+    margin: 0 0 0 8em;
+  }
+  .profile-pic {
+    height: 82em;
+  }
+  .profile-pic-content {
+    width: 62em;
+    height: 80em;
+    padding: 3em 0 3em 24.5em;
+    border-radius: 2em 2em 0 0;
+  }
+  .profile-pic img {
+    width: 50em;
+    height: 50em;
+    margin-right: 5em;
+  }
+  .personal-info {
+    height: 80em;
+  }
+  .personal-content {
+    height: 80em;
+    border-radius: 0 0 2em 2em;
+    margin-left: 2em;
+  }
+  .project-cntr {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+    padding: 7em 0 0 10em;
+  }
+}
+/* 1090px */
+@media (max-width: 68.125em) {
+  /* project */
+  .project-cntr {
+    width: 100em;
+  }
+  /* contact */
+  .contact-page {
+    padding-left: 10em;
+    width: 100em;
+    height: 70em;
+  }
+  .contact-container-1 {
+    padding-left: 10em;
+  }
+  .form input {
+    width: 25.5em;
+  }
+  #message-box {
+    width: 25em;
+  }
+}
+/* 920px */
+@media (max-width: 57.5em) {
+  .project-cntr {
+    width: 90em;
+  }
+  .contact-page {
+    padding-left: 5em;
+  }
+}
+/* 900px */
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+  body {
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "main main"
+      "footer footer";
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin: 0 2em 0 0;
+  }
+  header a {
+    font-size: 2.5em;
+  }
+  header a:hover {
+    color: var(--hover);
+  }
+  /* Making nav responsive and change to hamburger */
+  .showNav {
+    height: 0.8em;
+    width: 1.25em;
+    display: block;
+    border-top: 0.2em solid var(--text);
+    border-bottom: 0.2em solid var(--text);
+    border-radius: 0.2em;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .showNav::before {
+    content: "";
+    position: absolute;
+    width: 1.25em;
+    margin-top: 0.3em;
+    border-top: 0.2em solid var(--text);
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 50%;
+    height: 100vh;
+    background-color: var(--main-bg);
+    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 1s ease-in-out;
+    z-index: 10;
+  }
+
+  #clicked:target nav {
+    left: 50%;
+  }
+  
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    padding: 2em;
+    list-style: none;
+  }
+  .off {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--text);
+    cursor: pointer;
+  }
+  .nav-bar a:hover {
+    color: var(--hover);
+  }
+  #clicked:target .on {
+    display: none;
+  }
+  
+  #clicked:target .off {
+    display: block;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    transition: all 1s ease-in-out;
+  }
+  /* home */
+  .profile-pic {
+    padding: 3em 0 0 0;
+  }
+  .personal-content {
+    margin-left: 0;
+  }
+  .contact-page {
+    width: 60em;
+    height: 145em;
+    grid-template-columns: repeat(1, 1fr);
+    padding-left: 20em;
+  }
+  .contact-container-1 {
+    width: 50em;
+    border-radius: 2em 2em 0 0;
+  }
+  .contact-container-2 {
+    width: 55em;
+    border-radius: 0 0 2em 2em;
+  }
+}
+/* 885px */
+@media (max-width: 55.3125em) {
+  /* project */
+  .project-cntr {
+    width: 75em;
+  }
+}
+/* 776 */
+@media (max-width: 48.5em) {
+  html {
+    font-size: 50%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background: url(Assets/bg_img.png);
+    background-repeat: repeat;
+    background-size: cover;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+  }
+  /* home */
+  .profile-cntnr {
+    margin-left: 0em;
+  }
+  .profile-pic-content {
+    width: 55em;
+    height: 85em;
+    padding: 0 0 0 15em;
+  }
+  .profile-pic {
+    padding: 3em 0 0 10.5em;
+  }
+  .personal-info {
+    width: 50em;
+    padding-left: 10.5em;
+  }
+  .personal-content {
+    width: 67em;
+    padding: 1.5em;
+    margin: 0;
+  }
+  .free-time {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .achievements {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* project */
+  .project-cntr {
+    grid-template-columns: repeat(1, 1fr);
+    width: 50em;
+    padding-left: 20em;
+  }
+}
+/* 660px */
+@media (max-width: 41.25em) {
+  /* home  */
+  .profile-pic {
+    padding: 3em 0 0 0.5em;
+  }
+  .personal-info {
+    padding: 3em 0 0 0.5em;
+  }
+  /* contact */
+  .contact-page {
+    padding-left: 10em;
+  }
+}
+/* 580px */
+@media (max-width: 36.25em) {
+  /* home  */
+  .profile-pic-content {
+    width: 55em;
+    padding: 2em 0 0 2em;
+  }
+  .personal-info {
+    padding-left: 0.5em;
+  }
+  .personal-content {
+    width: 55em;
+    margin-left: 0.5em;
+  }
+  /* project */
+  .project-cntr {
+    padding-left: 10em;
+  }
+  /* contact */
+  .contact-page {
+    width: 50em;
+    padding-left: 10em;
+  }
+  .contact-container-1 {
+    width: 35em;
+  }
+  .contact-container-2 {
+    width: 40em;
+  }
+  .form input {
+    width: 20.5em;
+  }
+  #message-box {
+    width: 20em;
+  }
+  .contact-form-btn {
+    margin-left: 4em;
+  }
+  /* report */
+  .vali_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* 480px */
+@media (max-width: 30em) {
+  header {
+    padding: 0;
+  }
+  /* home */
+  .profile-pic {
+    padding: 2em 0 0 0;
+    margin: 0;
+  }
+  .profile-pic-content {
+    width: 37.5em;
+    height: 80em;
+    padding: 1em 0 0 2em;
+  }
+  .profile-pic-content img {
+    width: 30em;
+    height: 40em;
+  }
+  .personal-info {
+    width: 100vw;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+  }
+  .personal-content {
+    width: 33em;
+    height: 120em;
+  }
+  .pfle-hdng {
+    gap: 1em;
+  }
+  /* project */
+  .project-cntr {
+    width: 35em;
+    padding-left: 6.7em;
+  }
+  /* contact */
+  .contact-page {
+    width: 40em;
+    padding-left: 5em;
+  }
+  .contact-container-1 {
+    width: 29.5em;
+    padding: 0 2em 0 6em;
+  }
+  .contact-container-2 {
+    width: 36em;
+    padding-left: 1.5em;
+  }
+  /* report */
+  .vali_grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .site_report {
+    width: 45em;
+    padding: 1em;
+  }
+  .design_decision img {
+    width: 40em;
+  }
+}
+/* 320px - 370px */
+@media (min-width: 20em) and (max-width: 23.125em) {
+  /* project */
+  .project-cntr {
+    padding-left: 3.5em;
+  }
+  /* contact */
+  .contact-page {
+    width: 38em;
+    padding-left: 1em;
+  }
+  .contact-container-1 {
+    width: 29.5em;
+    padding: 0 0 0 6em;
+  }
+  /* report */
+  .site_report {
+    width: 35em;
+    padding: 1em;
+  }
+  .design_decision img {
+    width: 35em;
+  }
+}
