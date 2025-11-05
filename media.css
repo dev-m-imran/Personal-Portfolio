@@ -297,6 +297,9 @@
   /* home */
   .profile-cntnr {
     margin-left: 0em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .profile-pic-content {
     width: 55em;
@@ -307,6 +310,9 @@
     padding: 3em 0 0 10.5em;
   }
   .personal-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50em;
     padding-left: 10.5em;
   }
@@ -390,6 +396,7 @@
     word-break: break-word;
   }
 }
+
 /* 480px */
 @media (max-width: 30em) {
   header {
